@@ -1,0 +1,7 @@
+<div class="left-navbar text-light">
+  <div class="menu">
+    <div [routerLink]="item.router" routerLinkActive="router-link-active" *ngFor="let item of menus" class="menu-item">
+      {{ item.title }}
+    </div>
+  </div>
+</div>

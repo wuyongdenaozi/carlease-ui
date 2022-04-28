@@ -1,0 +1,17 @@
+<table class="table">
+  <thead>
+    <tr class="title-row">
+      <th scope="col" *ngIf="useAutoNumber">#</th>
+      <th scope="col" *ngFor="let colOption of dataOptions">{{ colOption.title }}</th>
+      <th scope="col" *ngIf="useButton" >操作</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let row of data; let i = index" (click)="click(row)" class="data-row">
+      <td *ngIf="useAutoNumber">{{ i + 1 }}</td>
+      <td *ngFor="let colOption of dataOptions">{{ row[colOption.field] }}</td>
+      <td *ngIf="useButton"><button (click)="clickButton(row)">{{ buttonTitle }}</button></td>
+    </tr>
+  </tbody>
+</table>

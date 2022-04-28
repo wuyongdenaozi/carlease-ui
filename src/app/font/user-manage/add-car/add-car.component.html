@@ -1,0 +1,47 @@
+<div class="modal-dialog">
+  <div class="add-car modal-content" (keyup.esc)="close()">
+    <div class="modal-header">
+      <h5 class="modal-title text-dark">新增汽车</h5>
+      <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="ms-5">
+        <label for="name" class="me-3 my-1">汽车名称: </label>
+        <input [(ngModel)]="result.name" id="name" type="text">
+      </div>
+
+      <div class="ms-5">
+        <label for="address" class="me-3 my-1">汽车地址: </label>
+        <input [(ngModel)]="result.address" id="address" type="type">
+      </div>
+
+      <div class="ms-5">
+        <label for="price" class="me-3 my-1">汽车租金: </label>
+        <input [(ngModel)]="result.price" id="price" type="number"><span class="ms-1">元/天</span>
+      </div>
+
+      <div class="ms-5">
+        <label for="type" class="me-3 my-1">汽车类型: </label>
+        <select [(ngModel)]="result.typeId" name="type" id="type" aria-placeholder="尽可选择当前支持类型">
+          <option *ngFor="let item of types" [value]="item.id">{{ item.name }}</option>
+        </select>
+      </div>
+
+      <div class="ms-5">
+        <label for="describes" class="me-3 my-1">汽车描述: </label>
+        <textarea [(ngModel)]="result.describes" name="describes" id="describes" cols="18" rows="3"></textarea>
+      </div>
+
+      <div class="ms-5">
+        <label for="file" class="me-3 my-1">图片信息: </label>
+        <input id="file" name="file" type="file">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button (click)="close()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+      <button (click)="add()" type="button" class="btn btn-primary">新增</button>
+    </div>
+  </div>
+</div>

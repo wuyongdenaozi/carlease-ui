@@ -1,0 +1,6 @@
+<div class="user-car">
+
+  <app-table [data]="cars" [dataOptions]="options" (selected)="select($event)"></app-table>
+
+  <button (click)="add()" type="submit" class="button">新增汽车</button>
+</div>

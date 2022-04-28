@@ -1,0 +1,15 @@
+<div class="home">
+  
+  <app-top></app-top>
+
+  <div class="title">
+    所&nbsp;&nbsp;有&nbsp;&nbsp;汽&nbsp;&nbsp;车&nbsp;&nbsp;
+  </div>
+
+  <div class="show">
+    <div *ngFor="let row of cards" class="mt-4 d-flex flex-sm-row">
+      <app-card *ngFor="let card of row" [card]="card" class="me-4"></app-card>
+    </div>
+  </div>
+  
+</div>

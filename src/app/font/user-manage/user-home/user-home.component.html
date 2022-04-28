@@ -1,0 +1,9 @@
+<div class="home">
+  <app-top-navbar [name]="user.nick"></app-top-navbar>
+
+  <app-left-navbar [menus]="menus" class="left"></app-left-navbar>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="home">
+  <app-top></app-top>
+
+  <div class="business-show">
+    <span class="float-end"><a [routerLink]="['home']" routerLinkActive="router-link-active" >查看更多>></a></span>
+    <h1><small>1F</small>新车上市</h1>
+
+    <div class="mt-4 d-flex flex-sm-row justify-content-between">
+      <app-card *ngFor="let card of hotCards" [card]="card"></app-card>
+    </div>
+    
+  </div>
+
+  <div class="business-show">
+    <span class="float-end"><a [routerLink]="['home']" routerLinkActive="router-link-active" >查看更多>></a></span>
+    <h1><small>2F</small>热门汽车</h1>
+
+    <div class="mt-4 d-flex flex-sm-row justify-content-between">
+      <app-card *ngFor="let card of countCards" [card]="card"></app-card>
+    </div>
+    
+  </div>
+   
+</div>

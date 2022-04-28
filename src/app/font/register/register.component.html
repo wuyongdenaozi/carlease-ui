@@ -1,0 +1,54 @@
+<div class="register text-light pt-3">
+  <div class="title mx-auto pt-5 fw-lighter fs-4 text-center">Sign Up</div>
+
+  <form id="box" class="form-box p-4">
+    <div class="form-group">
+      <label for="username" class="fs-5 my-2">Username</label>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon inline-block"><i class="bi bi-person"></i></span>
+        <input [(ngModel)]="registerInfo.username" type="text" class="form-control fs-6" id="username" name="username" placeholder="Your Username">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="fs-5 my-2">Password</label>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon inline-block"><i class="bi bi-lock-fill"></i></span>
+        <input [(ngModel)]="registerInfo.password" class="form-control fs-6" type="password" id="password" name="password" placeholder="Your Password">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nick" class="fs-5 my-2">Nick</label>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon inline-block"><i class="bi bi-credit-card-fill"></i></span>
+        <input [(ngModel)]="registerInfo.nick" type="text" class="form-control fs-6" id="nick" name="nick" placeholder="Your Nick">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone" class="fs-5 my-2">Phone</label>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon inline-block"><i class="bi bi-phone"></i></span>
+        <input [(ngModel)]="registerInfo.phone" type="text" class="form-control fs-6" id="phone" name="phone" placeholder="Your Phone">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="fs-5 my-2">Email</label>
+
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon inline-block"><i class="bi bi-envelope"></i></span>
+        <input [(ngModel)]="registerInfo.email" type="email" class="form-control fs-6" id="email" name="email" placeholder="Your Email">
+      </div>
+    </div>
+  </form>
+
+  <div class="btn-box form-group d-flex justify-content-around">
+    <button (click)="register()" class="r-button btn my-2" type="submit">Register</button>
+  </div>
+</div>

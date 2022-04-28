@@ -1,0 +1,18 @@
+<div class="modal-dialog">
+  <div class="modal-content" (keyup.esc)="close()">
+    <div class="modal-header">
+      <h5 class="modal-title text-dark">新增汽车类型</h5>
+      <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body">
+      <label for="type" class="text-dark me-3">汽车类型: </label>
+      <input [(ngModel)]="type" id="type" type="text">
+    </div>
+
+    <div class="modal-footer">
+      <button (click)="close()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+      <button (click)="add()" type="button" class="btn btn-primary">新增</button>
+    </div>
+  </div>
+</div>

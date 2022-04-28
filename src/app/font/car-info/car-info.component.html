@@ -1,0 +1,54 @@
+<div class="car-info">
+
+  <app-top></app-top>
+
+  <div class="title">
+    汽&nbsp;&nbsp;车&nbsp;&nbsp;详&nbsp;&nbsp;情&nbsp;&nbsp;页
+  </div>
+  <div class="content d-flex flex-row">
+    <img [src]="carInfo.img" alt="汽车详情" width="500" height="400">
+
+    <div class="info">
+      <div>
+        <label class="info-title" for="carName">汽车名称: </label>
+        <label>{{ carInfo.name }}</label>
+      </div>
+
+      <div>
+        <label class="info-title" for="carType">汽车类型: </label>
+        <label>{{ carInfo.typeName }}</label>
+      </div>
+
+      <div>
+        <label class="info-title" for="carAddress">所在地址: </label>
+        <label>{{ carInfo.address }}</label>
+      </div>
+
+      <div>
+        <label class="info-title" for="carPrice">租用金额: </label>
+        <label>{{ carInfo.price }}</label>
+      </div>
+
+      <div>
+        <label class="info-title" for="number">租借次数: </label>
+        <label>{{ carInfo.number }}</label>
+      </div>
+
+      <div>
+        <label class="info-title" for="userNick">车主姓名: </label>
+        <label>{{ carInfo.userNick }}</label>
+      </div>
+
+      <div>
+        <label class="info-title" for="userPhone">联系电话: </label>
+        <label>{{ carInfo.userPhone }}</label>
+      </div>
+
+      <div>
+        <button *ngIf="!carInfo.flag" (click)="buy()" class="btn buy" type="submit">我要租车</button>
+        <button *ngIf="carInfo.flag" class="btn buy" type="submit" disabled>正在出租</button>
+        <button [routerLink]="['/font']" routerLinkActive="router-link-active"  class="btn break" type="submit">返回首页</button>
+      </div>
+    </div>
+  </div>
+</div>

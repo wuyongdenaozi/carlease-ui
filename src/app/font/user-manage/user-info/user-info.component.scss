@@ -1,0 +1,55 @@
+.info {
+  min-height: 500px;
+  position: relative;
+
+  div {
+    margin: 10px 200px 60px;
+    width: 500px;
+    font-size: 24px;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.25);
+    position: relative;
+
+    label {
+      margin-right: 50px;
+    }
+
+    input {
+      color: #fff;
+      border: none;
+      background: none;
+      position: absolute;
+      float: left;
+      left: 100px;
+    }
+
+    input:active, input:hover, input:host, input::after, input:focus {
+      outline: none;
+      border: none;
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  .button {
+    font-size: 22px;
+    text-align: center;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin: 10px 200px;
+    height: 30px;
+    width: 150px;
+    border: 1px solid rgb(255, 255, 255, 0.25);
+    position: absolute;
+    bottom: 0;
+  }
+
+  .button:hover {
+    color: #7c7c7c;
+  }
+
+  .button-right {
+    float: left;
+    margin-left: 400px;
+    position: absolute;
+  }
+}

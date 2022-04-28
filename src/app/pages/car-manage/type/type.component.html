@@ -1,0 +1,18 @@
+<d-data-table class="m-4" [dataSource]="carTypes" [scrollable]="true" [type]="'striped'">
+  <thead dTableHead>
+    <tr dTableRow>
+      <th dHeadCell *ngFor="let col of dataTableOptions">{{ col.header }}</th>
+    </tr>
+  </thead>
+  <tbody dTableBody>
+    <ng-template let-rowItem="rowItem" let-rowIndex="rowIndex">
+      <tr dTableRow>
+        <td dTableCell *ngFor="let col of dataTableOptions">
+          {{ rowItem[col.field] }}
+        </td>
+      </tr>
+    </ng-template>
+  </tbody>
+</d-data-table>
+
+<button (click)="show()" type="button" class="btn btn-dark float-end me-4">新增汽车类型</button>

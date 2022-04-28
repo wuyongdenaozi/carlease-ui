@@ -1,0 +1,29 @@
+.card {
+  width: 220px;
+  border: 1px solid #eaeaea;
+  padding: 13px 9px 9px;
+  border-radius: 0;
+
+  img {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 12px 0 10px;
+
+    a {
+      color: #c81622;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}

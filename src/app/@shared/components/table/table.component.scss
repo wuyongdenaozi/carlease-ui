@@ -1,0 +1,38 @@
+.table {
+  width: 98%;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  margin: 10px auto;
+  background: none;
+
+  thead {
+    border-bottom: none;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+
+    th {
+      height: 50px;
+      border: none;
+      border-left: 1px solid rgb(255, 255, 255, 0.4);
+    }
+  }
+
+  tbody {
+    border-top: 1px solid rgb(255, 255, 255, 0.4);
+    font-size: 12px;
+    line-height: 35px;
+
+    tr {
+      height: 35px;
+
+      td {
+        border-left: 1px solid rgb(255, 255, 255, 0.4);
+        padding-left: 20px;
+      }
+    }
+
+    tr:hover {
+      background-color: rgb(255, 255, 255, 0.4);
+    }
+  }
+}

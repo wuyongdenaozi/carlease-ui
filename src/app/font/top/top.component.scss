@@ -1,0 +1,11 @@
+.top-bar {
+  background-image: url('/assets/img/background/top-bar-bg.png'); 
+
+  li {
+    list-style: none;
+  }
+
+  li a:hover {
+    text-decoration: underline; 
+  }
+}

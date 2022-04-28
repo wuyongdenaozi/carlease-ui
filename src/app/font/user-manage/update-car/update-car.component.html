@@ -1,0 +1,45 @@
+<div class="modal-dialog">
+  <div class="add-car modal-content" (keyup.esc)="close()">
+    <div class="modal-header">
+      <h5 class="modal-title text-dark">汽车详情信息</h5>
+      <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="ms-5">
+        <label for="name" class="me-3 my-1">汽车名称: </label>
+        <input [(ngModel)]="carInfo.name" id="name" type="text" disabled>
+      </div>
+
+      <div class="ms-5">
+        <label for="address" class="me-3 my-1">汽车地址: </label>
+        <input [(ngModel)]="carInfo.address" id="address" type="type">
+      </div>
+
+      <div class="ms-5">
+        <label for="price" class="me-3 my-1">汽车租金: </label>
+        <input [(ngModel)]="carInfo.price" id="price" type="number"><span class="ms-1">元/天</span>
+      </div>
+
+      <div class="ms-5">
+        <label for="type" class="me-3 my-1">汽车类型: </label>
+        <input [(ngModel)]="carInfo.typeName" id="type" type="text" disabled>
+      </div>
+
+      <div class="ms-5">
+        <label for="describes" class="me-3 my-1">汽车描述: </label>
+        <textarea [(ngModel)]="carInfo.describes" name="describes" id="describes" cols="18" rows="3"></textarea>
+      </div>
+
+      <div class="ms-5">
+        <label for="file" class="me-3 my-1">图片信息: </label>
+        <img [src]="carInfo.img" width="100" height="75">
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button (click)="change()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">修改</button>
+      <button (click)="delete()" type="button" class="btn btn-primary">删除</button>
+    </div>
+  </div>
+</div>

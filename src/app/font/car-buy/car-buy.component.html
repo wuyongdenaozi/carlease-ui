@@ -1,0 +1,40 @@
+<div class="modal-dialog">
+  <div class="car-buy modal-content" (keyup.esc)="close()">
+    <div class="modal-header">
+      <h5 class="modal-title text-dark">租赁详情</h5>
+      <button (click)="close()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+
+    <div class="modal-body">
+      <div class="ms-5">
+        <label for="name" class="me-3 my-1">汽车名称: </label>
+        <input [(ngModel)]="carInfo.name" id="name" type="text" disabled>
+      </div>
+
+      <div class="ms-5">
+        <label for="address" class="me-3 my-1">汽车地址: </label>
+        <input [(ngModel)]="carInfo.address" id="address" type="type" disabled>
+      </div>
+
+      <div class="ms-5">
+        <label for="type" class="me-3 my-1">汽车类型: </label>
+        <input [(ngModel)]="carInfo.typeName" id="type" type="text" disabled>
+      </div>
+
+      <div class="ms-5">
+        <label for="file" class="me-3 my-1">图片信息: </label>
+        <img [src]="carInfo.img" width="100" height="75">
+      </div>
+
+      <div class="ms-5">
+        <label for="date" class="me-3 my-1">租赁天数: </label>
+        <input [(ngModel)]="date" id="type" type="number" min="1" max="365"> 
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button (click)="buy()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">确认租赁</button>
+      <button (click)="close()" type="button" class="btn btn-primary">放弃租赁</button>
+    </div>
+  </div>
+</div>
