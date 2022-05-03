@@ -1,12 +1,9 @@
 <div class="car-info">
-
   <app-top></app-top>
 
-  <div class="title">
-    汽&nbsp;&nbsp;车&nbsp;&nbsp;详&nbsp;&nbsp;情&nbsp;&nbsp;页
-  </div>
+  <div class="title">汽&nbsp;&nbsp;车&nbsp;&nbsp;详&nbsp;&nbsp;情&nbsp;&nbsp;页</div>
   <div class="content d-flex flex-row">
-    <img [src]="carInfo.img" alt="汽车详情" width="500" height="400">
+    <img [src]="carInfo.img" alt="汽车详情" width="500" height="400" />
 
     <div class="info">
       <div>
@@ -45,9 +42,10 @@
       </div>
 
       <div>
-        <button *ngIf="!carInfo.flag" (click)="buy()" class="btn buy" type="submit">我要租车</button>
-        <button *ngIf="carInfo.flag" class="btn buy" type="submit" disabled>正在出租</button>
-        <button [routerLink]="['/font']" routerLinkActive="router-link-active"  class="btn break" type="submit">返回首页</button>
+        <button *ngIf="carInfo.flag === 0" (click)="buy()" class="btn buy" type="submit">我要租车</button>
+        <button *ngIf="carInfo.flag === 1" class="btn buy" type="submit" disabled>正在出租</button>
+        <button *ngIf="carInfo.flag === 2" class="btn buy" type="submit" disabled>正在维修</button>
+        <button [routerLink]="['/font']" routerLinkActive="router-link-active" class="btn break" type="submit">返回首页</button>
       </div>
     </div>
   </div>

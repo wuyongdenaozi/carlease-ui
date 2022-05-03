@@ -1,6 +1,6 @@
 <div class="top-bar">
   <div class="py-2 overflow-hidden">
-    <span class="ms-5 fs-6">汽车租赁平台</span>
+    <span class="ms-5 fs-6" (click)="toHome()">汽车租赁平台</span>
     <ul class="text-light float-end me-3">
       <li *ngFor="let top of tops" class="inline-block float-start">
         <a *ngIf="top.enable" [routerLink]="top.router" class="text-light">{{ top.title }}</a><span class="mx-2">|</span>

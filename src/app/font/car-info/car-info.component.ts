@@ -35,9 +35,7 @@ export class CarInfoComponent implements OnInit {
   buy() {
     this.userService.getUser().subscribe(data => {
       if (data) {
-        this.simpleModalService.addModal(CarBuyComponent, { carInfo: this.carInfo }).subscribe(data => {
-
-        });
+        this.simpleModalService.addModal(CarBuyComponent, { carInfo: this.carInfo }).subscribe(data => {});
       } else {
         alert('登录信息失效,请登录!');
         this.router.navigate(['font', 'login']);
