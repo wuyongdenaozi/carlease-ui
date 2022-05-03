@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/service/user.service';
 
@@ -10,10 +11,9 @@ export interface Nav {
 @Component({
   selector: 'app-top',
   templateUrl: './top.component.html',
-  styleUrls: ['./top.component.scss']
+  styleUrls: ['./top.component.scss'],
 })
 export class TopComponent implements OnInit {
-
   public tops: Array<Nav> = [
     { title: '用户登录', router: 'login', enable: true },
     { title: '用户注册', router: 'register', enable: true },
@@ -21,20 +21,21 @@ export class TopComponent implements OnInit {
     { title: '联系我们', router: '', enable: true },
   ];
 
-  constructor(
-    private userService: UserService
-  ) { }
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
-    this.userService.getUser().subscribe(data => {
+    this.userService.getUser().subscribe((data) => {
       if (data) {
         this.tops[0] = {
-          title: '欢迎回来: ' + data.nick, 
-          router: 'user', 
-          enable: true
-        }
+          title: '欢迎回来: ' + data.nick,
+          router: 'user',
+          enable: true,
+        };
       }
     });
   }
 
+  toHome() {
+    this.router.navigate(['/']);
+  }
 }
