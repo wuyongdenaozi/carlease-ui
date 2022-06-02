@@ -15,7 +15,8 @@ export class RegisterComponent {
     password: '',
     nick: '',
     phone: '',
-    email: ''
+    email: '',
+    cd: ''
   }
 
   constructor(
