@@ -29,6 +29,11 @@ export class QueryComponent implements OnInit {
       field: 'email',
       header: '邮箱地址',
       fieldType: 'text'
+    },
+    {
+      field: 'cd',
+      header: '身份信息',
+      fieldType: 'text'
     }
   ]
 
