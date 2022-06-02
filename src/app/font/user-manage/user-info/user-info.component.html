@@ -1,12 +1,13 @@
 <div class="info mt-4 mx-auto">
+
   <div *ngIf="!change">
     <label for="name">昵称:</label>
     <label>{{ user.nick }}</label>
   </div>
-
+  
   <div *ngIf="change">
     <label for="name">昵称:</label>
-    <input [(ngModel)]="user.nick" id="name" name="name" type="text" placeholder="用户昵称不能为空!" />
+    <input [(ngModel)]="user.nick" id="name" name="name" type="text" placeholder="用户昵称不能为空!">
   </div>
 
   <div *ngIf="!change">
@@ -16,7 +17,7 @@
 
   <div *ngIf="change">
     <label for="phone">电话:</label>
-    <input [(ngModel)]="user.phone" id="phone" name="phone" type="phone" placeholder="用户电话不能为空!" />
+    <input [(ngModel)]="user.phone" id="phone" name="phone" type="phone" placeholder="用户电话不能为空!">
   </div>
 
   <div *ngIf="!change">
@@ -26,17 +27,7 @@
 
   <div *ngIf="change">
     <label for="email">邮箱:</label>
-    <input [(ngModel)]="user.email" id="email" name="email" type="email" placeholder="请输入新邮箱地址" />
-  </div>
-
-  <div *ngIf="!change">
-    <label for="cd">Card:</label>
-    <label>{{ user.cd }}</label>
-  </div>
-
-  <div *ngIf="change">
-    <label for="cd">Card:</label>
-    <input [(ngModel)]="user.cd" id="cd" name="cd" type="cd" placeholder="请输入新的身份证号" />
+    <input [(ngModel)]="user.email" id="email" name="email" type="email" placeholder="请输入新邮箱地址">
   </div>
 
   <button *ngIf="!change" (click)="changeInfo(true)" type="submit" class="button">编辑信息</button>

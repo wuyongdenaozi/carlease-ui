@@ -8,7 +8,6 @@ export interface User {
   nick: string;
   phone: string;
   email?: string;
-  cd?: string;
 }
 
 /** 登录信息 */
@@ -24,22 +23,22 @@ export interface RegisterInfo {
   nick: string;
   phone: string;
   email?: string;
-  cd?: string;
 }
 
 /**
  * 用户信息服务类
  */
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class UserService {
+
   /** 保存当前登录用户信息 */
   private user = new BehaviorSubject<User | undefined>(undefined);
 
-  constructor(private http: HttpService) {}
+  constructor(private http: HttpService) { }
 
-  /**
+  /** 
    * 保存登录用户信息
    */
   setUser(user: User): void {
@@ -89,4 +88,5 @@ export class UserService {
   update(data: User): Observable<Response<User>> {
     return this.http.put<User>('user', data);
   }
+
 }
